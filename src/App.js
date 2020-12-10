@@ -44,7 +44,7 @@ const PokemonSingle = () => {
     // do something after pokemon is loaded
   }, [matchedPokemon]);
   useEffect(() => {
-    fetch(`https://pokefight-api.herokuapp.com/pokemon/${id}`)
+    fetch(`https://pokefight-server.herokuapp.com/pokemon${id}`)
       .then((res) => res.json())
       .then((res) => setMatchedPokemon(res));
   }, []);
