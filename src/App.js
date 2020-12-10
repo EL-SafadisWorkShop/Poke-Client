@@ -7,7 +7,7 @@ import "./App.css";
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
   useEffect(() => {
-    fetch("https://pokefight-api.herokuapp.com/pokemon")
+    fetch("https://pokefight-server.herokuapp.com/")
       .then((res) => res.json())
       .then((res) => setPokemon(res));
   }, []);
