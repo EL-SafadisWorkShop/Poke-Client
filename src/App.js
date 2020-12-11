@@ -3,6 +3,9 @@ import { Link, Switch, Route, useParams } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "tachyons";
+import Logo from "./components/Logo/Logo";
+import Particles from "react-particles-js";
 
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -12,13 +15,27 @@ const PokemonList = () => {
       .then((res) => setPokemon(res));
   }, []);
 
+  /*const particlesOptions = {
+    particles: {
+      number: {
+        value: 30,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+    },
+  };*/
+
   return pokemon ? (
-    <>
+    <div style={{ display: "flex", juustifyContent: "flex-end" }}>
+      {/* <Particles className="particles" params={particlesOptions} />*/}
       <ul>
         {pokemon.map((p) => (
           <li key={p.id}>
             <Link to={`/pokemon/${p.id}`}>
               <img
+                className="dib br3 pa3 ma2 grow bw5 shadow-5"
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png`}
               />
               {p.name.english}
@@ -27,7 +44,7 @@ const PokemonList = () => {
         ))}
         <div className="clear"></div>
       </ul>
-    </>
+    </div>
   ) : (
     <>
       <h1>Loading...</h1>
@@ -115,7 +132,9 @@ export default function App() {
             alt="Pokemon"
           />
         </Link>
-        <h1>Pokefight</h1>
+        <h1>
+          <Logo />
+        </h1>
         <Switch>
           <Route exact path="/">
             <PokemonList />

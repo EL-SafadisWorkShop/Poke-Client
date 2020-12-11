@@ -6,7 +6,7 @@
 
 .outdo {
   padding: 20px 20px 50px 20px;
-  background-color: #3d7dca;
+  background: linear-gradient(89deg, #ff42d9 0%, #04c8de 100%);
 }
 
 .spnr {
@@ -30,7 +30,7 @@ h1 {
   font-size: 66px;
   font-weight: 700;
   -webkit-text-stroke: 2px #fff; /* width and color */
-  color: #fff;
+  color: rgba(255, 5, 5, 0.205);
   font-family: "Oswald", sans-serif;
   letter-spacing: 0.25em;
 }
@@ -73,7 +73,7 @@ ul li a {
   width: 120px;
   margin: 10px 10px;
   padding: 15px;
-  border: solid #ccc 1px;
+  border: solid rgba(0, 109, 251, 0.712) 3px;
   display: block;
   color: #fff;
   background: rgba(255, 255, 255, 0.3);
@@ -120,3 +120,10 @@ ul li a:hover {
   padding: 29px;
   background: rgba(255, 255, 255, 0.4);
 }
+/*.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}*/
