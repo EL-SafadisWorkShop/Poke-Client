@@ -10,7 +10,7 @@ const Logo = () => {
         options={{ max: 50 }}
         style={{ height: 100, width: 250 }}
       >
-        <div className="Tilt-inner"> POKEFIGHT </div>
+        <div className="Tilt-inner ph2-ns"> POKEFIGHT </div>
       </Tilt>
     </div>
   );
